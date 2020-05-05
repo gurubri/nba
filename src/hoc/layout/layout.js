@@ -4,6 +4,8 @@ import './layout.css'
 
 //components
 import Header from '../../components/header/header';
+import Footer from '../../components/footer/footer';
+
 
 class Layout extends Component {
     state = {
@@ -24,6 +26,7 @@ class Layout extends Component {
                 onOpenNav={() => this.togglesidenav(true)}
                 />
                 {this.props.children}
+                <Footer/>
             </div>
         )
     }
