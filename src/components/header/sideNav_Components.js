@@ -19,6 +19,24 @@ const SideNavItems = () => {
             icon:'file-text-o',
             text: 'News',
             link: '/news'
+        },
+        {
+            type : style.option,
+            icon:'play',
+            text: 'Videos',
+            link: '/Videos'
+        },
+        {
+            type : style.option,
+            icon:'sign-in',
+            text: 'sign-in',
+            link: '/sign-in'
+        },
+        {
+            type : style.option,
+            icon:'sign-out',
+            text: 'sign-out',
+            link: '/sign-out'
         }
     ]
     const showItems = () => {
