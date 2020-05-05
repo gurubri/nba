@@ -6,14 +6,41 @@ import FontAwesome from 'react-fontawesome';
 import style from './header.module.css';
 
 const SideNavItems = () => {
+
+    const items = [
+        {
+            type : style.option,
+            icon:'home',
+            text: 'Home',
+            link: '/'
+        },
+        {
+            type : style.option,
+            icon:'file-text-o',
+            text: 'News',
+            link: '/news'
+        }
+    ]
+    const showItems = () => {
+        return items.map((item,i) =>{
+            return(
+                <div key={i} className={item.type}>
+                    <Link to={item.link}>
+                        <FontAwesome name={item.icon}/>
+                       {item.text}
+                    </Link>
+                </div>
+            )
+        })
+    }
+
     return(
-        <div className={style.option}>
-            <Link to="/">
-                <FontAwesome name="home"/>
-                Home
-            </Link>
+        <div>
+            {showItems()}
         </div>
+        
     )
 }
 
 export default SideNavItems;
+   
