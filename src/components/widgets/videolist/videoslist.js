@@ -4,7 +4,7 @@ import axios from 'axios';
 
 import {URL} from '../../../config';
 import Button from '../buttons';
-import videosListTemplate from './videolisttemplate';
+import VideosListTemplate from './videolisttemplate';
 
 class videoslist extends Component {
     state ={
@@ -34,11 +34,12 @@ class videoslist extends Component {
             })
         })
     }
+
     renderVideos = () =>{
         let template = null;
         switch(this.props.type){
             case('card'):
-                template = <videosListTemplate data={this.state.videos} teams={this.state.teams}/>
+                template = <VideosListTemplate data={this.state.videos} teams={this.state.teams}/>
                 break;
         default:
             template=null;
@@ -66,7 +67,7 @@ class videoslist extends Component {
         : null
     }
     render(){ 
-        console.log(this.state.videos)
+        // console.log(this.state.videos)
         return(
             <div className={styles.videolist_wrapper}>
                 {this.renderTitle()}
