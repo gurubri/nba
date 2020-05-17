@@ -31,7 +31,9 @@ class NewsList extends Component{
         axios.get(`${URL}/articles?_start=${this.props.start}&_end=${this.props.amount}`)
         .then(response =>{
             this.setState({
-                items:[...this.state.items,...response.data]
+                items:[...this.state.items,...response.data],
+                start,
+                end
             })
         })
     }

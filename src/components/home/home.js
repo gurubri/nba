@@ -20,15 +20,15 @@ const Home = () =>{
             <NewsList
                 type="card"
                 loadmore={true}
-                start={4}
-                amount={7}
+                start={1}
+                amount={3}
             />
             <VideoList
                 type="card"
                 title={true}
                 loadmore={true}
-                start={5}
-                amount={9}
+                start={1}
+                amount={3}
             />
         </div>
     )
