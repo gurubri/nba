@@ -10,7 +10,7 @@ import Footer from '../../components/footer/footer';
 class Layout extends Component {
     state = {
        showNav:false 
-    }
+    } 
     togglesidenav = (action) =>{
         this.setState({
             showNav:action
